@@ -32,8 +32,8 @@ const links = [
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item" v-for="link in links">
-              <RouterLink :key="link.id" :to="link.src">{{ link.title }}</RouterLink>
+            <li class="nav-item" v-for="link in links" :key="link.id">
+              <RouterLink  :to="link.src">{{ link.title }}</RouterLink>
             </li>
            
           </ul>
