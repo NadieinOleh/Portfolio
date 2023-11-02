@@ -1,6 +1,7 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { RouterView } from 'vue-router';
 import TheHeader from './components/TheHeader.vue';
+import TheFooter from './components/TheFooter.vue';
 import { onMounted } from 'vue';
 import { localeStore } from './stores/locale';
 
@@ -17,7 +18,14 @@ onMounted(() => {
   <TheHeader />
 
   <RouterView />
+
+  <TheFooter />
 </template>
 
-<style scoped>
+<style>
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>

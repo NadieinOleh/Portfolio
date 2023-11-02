@@ -1,12 +1,12 @@
-
-$body-bg: #1A1A1A;
-$body-color: #FFF;
+$body-bg: #1a1a1a;
+$body-color: #fff;
 $bs-body-font-weight: 600;
-$secondary: #0E312C;
-$primary: #FFF;
-$success: #FF9143;
-$light: #E5E6EB;
-$dark: #262A2C;
+$secondary: #0e312c;
+$primary: #fff;
+$success: #ff9143;
+$light: #e5e6eb;
+$dark: #262a2c;
+$black: #131313;
 $bs-emphasis-color-rgb: $body-color;
 
 nav a.router-link-exact-active {
@@ -14,19 +14,18 @@ nav a.router-link-exact-active {
   text-decoration: underline;
 }
 
-
 nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
   text-decoration: none;
   color: $primary;
-  
 }
 
 a {
   font-weight: 600;
 }
 
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
 
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
