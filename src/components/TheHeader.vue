@@ -11,7 +11,7 @@ const links = [
 </script>
 
 <template>
-  <header>
+  <header class="header">
     <nav class="navbar navbar-expand-lg m-0">
       <div class="container-fluid">
         <div class="d-flex align-items-center">
@@ -44,6 +44,11 @@ const links = [
 </template>
 
 <style scoped>
+.header {
+  box-shadow: 0 1em 1em rgba(255, 145, 67, 0.5);
+  border-radius: 20px;
+}
+
 .logo {
   display: flex;
   justify-content: center;
