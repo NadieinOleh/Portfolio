@@ -1,12 +1,15 @@
 <template>
   <footer class="footer bg-black">
-    <div class="p-5">
-      <h3 class="text-center text-success mb-4 title">Get in Touch With me</h3>
-      <h4 class="text-center email">{{ email }}</h4>
-    </div>
-
     <div class="container text-center pb-5">
       <div class="row flex">
+        <div class="col-12 pt-4">
+          <h3 class="text-center text-success mb-4 title">Get in Touch With me</h3>
+        </div>
+
+        <div class="col-12 pb-3">
+          <h4 class="text-center email">{{ email }}</h4>
+        </div>
+
         <div class="col"><img class="image" src="@/assets/ukraine.png" alt="Stand With Ukraine" /></div>
 
         <div class="col">
@@ -58,7 +61,7 @@ const email = 'nadeinolegdev@gmail.com';
   border-radius: 50%;
 }
 .email {
-  font-size: 30px;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
