@@ -11,7 +11,7 @@ const links = [
 </script>
 
 <template>
-  <header class="header">
+  <header class="header mb-5">
     <nav class="navbar navbar-expand-lg m-0">
       <div class="container-fluid">
         <div class="d-flex align-items-center">
