@@ -11,7 +11,7 @@ const links = [
 </script>
 
 <template>
-  <header>
+  <header class="header mb-5">
     <nav class="navbar navbar-expand-lg m-0">
       <div class="container-fluid">
         <div class="d-flex align-items-center">
@@ -32,8 +32,8 @@ const links = [
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item" v-for="link in links">
-              <RouterLink :key="link.id" :to="link.src">{{ link.title }}</RouterLink>
+            <li class="nav-item" v-for="link in links" :key="link.id">
+              <RouterLink  :to="link.src">{{ link.title }}</RouterLink>
             </li>
            
           </ul>
@@ -44,6 +44,11 @@ const links = [
 </template>
 
 <style scoped>
+.header {
+  box-shadow: 0 1em 1em rgba(255, 145, 67, 0.5);
+  border-radius: 20px;
+}
+
 .logo {
   display: flex;
   justify-content: center;
