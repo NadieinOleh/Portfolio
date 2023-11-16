@@ -35,7 +35,7 @@
           <p class="mt-3 text-danger" v-show="error">{{ error }}</p>
         </div>
         <div class="col-xl-6 col-md-12 flex mb-5 mb-sm-5">
-          <img class="img flex" src="@/assets/myFoto.png" alt="MyFoto" />
+          <img class="img flex" src="@/assets/372497211387458.png" alt="MyFoto" />
         </div>
       </div>
     </div>
