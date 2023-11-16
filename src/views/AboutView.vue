@@ -1,5 +1,6 @@
 <template>
   <main>
+    <img class="vectorLeft vector" src="@/assets/Vector 6.svg" />
     <div class="flex flex-column wrapper py-4">
       <h1 class="mb-3 text-uppercase">About me</h1>
       <p class="mb-md-5 title">
@@ -26,6 +27,8 @@
         <li class="list-group-item">A list item</li>
       </ol>
     </div>
+
+    <img class="vectorRight vector" src="@/assets/Vector 8.svg" />
 
     <div class="flex flex-column mb-4">
       <h5>Frontend Developer</h5>
@@ -77,10 +80,16 @@
 </template>
 
 <style lang="scss" scoped>
+.vectorLeft {
+  left: -25%;
+}
+.vectorRight {
+  right: -25%;
+}
+
 .wrapper {
   width: 50%;
   margin: 0 auto;
-
   @media (max-width: 768px) {
     width: 80%;
   }
