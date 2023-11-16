@@ -26,7 +26,6 @@ a {
   font-weight: 600;
 }
 
-
 *,
 *::before,
 *::after {
@@ -57,10 +56,14 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 
+  position: relative;
+  overflow: hidden;
   font-weight: normal;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
   padding: 0;
 }
@@ -72,8 +75,5 @@ main {
 nav {
   margin: 0;
 }
-
-
-
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
