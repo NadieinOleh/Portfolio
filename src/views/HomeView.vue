@@ -18,9 +18,9 @@
           </p>
 
           <h1 class="titleAnimation">
-            <span class="textAnimation">I`m</span>
-            <span class="textAnimation">Oleh</span>
-            <span class="textAnimation">Nadiein</span>
+            <span class="textAnimation">{{ $t("home.home") }}</span>
+            <span class="textAnimation">{{ $t("home.name") }}</span>
+            <span class="textAnimation">{{$t("home.surname")}}</span>
           </h1>
 
           <h5 class="subTitleAnimation">
@@ -29,13 +29,13 @@
             <span class="textAnimation">Developer</span>
           </h5>
           <button type="button" @click="downloadWithAxios(cv.src, cv.title)" class="btn btn-outline-success">
-            Download CV
+            {{$t("home.download")}} CV
           </button>
 
           <p class="mt-3 text-danger" v-show="error">{{ error }}</p>
         </div>
         <div class="col-xl-6 col-md-12 flex mb-5 mb-sm-5">
-          <img class="img flex" src="@/assets/372497211387458.png" alt="MyFoto" />
+          <img class="img flex" src="@/assets/372497211387458.png " alt="MyFoto" />
         </div>
       </div>
     </div>
@@ -180,5 +180,8 @@ span:nth-child(3) {
   max-width: 400px;
   max-height: 400px;
   border-radius: 10px;
+
+  animation: slideInRight;
+  animation-duration: 2s;
 }
 </style>

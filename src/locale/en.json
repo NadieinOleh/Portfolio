@@ -1,3 +1,64 @@
 {
-  "hello": "hello"
+  "home": {
+    "home": "I`m",
+    "download": "Download",
+    "name": "Oleh",
+    "surname": "Nadiein"
+  },
+  "about": {
+    "about": "About me",
+    "title": "A sports enthusiast with a keen interest in mathematics who use his will to win, determination, and planning skills to achieve both personal and professional goals. My fear of challenges turns into motivation for continuous self-improvement. My desire to combine my passion for sports with software development makes me a unique candidate for a front-end developer position who will bring the energy, motivation, and technical skills to deliver great results. The goal of my studying JavaScript for back-end development and frameworks is to be able to implement complex and powerful web application features while ensuring high performance, security, and scalability",
+    "experience": "experience",
+    "organization": "Charity Organization",
+    "projectFuture": {
+      "responsibilities": {
+        "1": "Creating and maintaining the organization's application, ensuring its user-friendly interface and correct operation on all devices",
+        "2": "Develop interactive interfaces to display information about programmes and services provided to veterans and their families.",
+        "3": "Collaborating with other teams, including designers and the customer's team, to perform common tasks and achieve the organization's goals.",
+        "4": "Installing and configuring Strapi on the server, including setting up the database and other parameters. Communication between Strapi and the front-end application to receive and display content on the website or application.",
+        "5": "Innovation and technological development: Researching and implementing new technologies and innovations to improve the functionality and user experience of the website.",
+        "6": "Payment system development: Development of an interface for processing donations, including the ability to select the amount, convenient payment method and fill in the required data.",
+        "7": "Creating visually appealing interfaces: Developing interfaces that impress and grab users attention with stylish Material-UI components such as beautiful buttons, elegant forms, informative tables, and attractive cards.",
+        "8": "Customize the color palette: Create Material-UI themes that reflect your project's corporate colors and design, giving the interface a consistent look and feel."
+      }
+    },
+    "freelanceProjects": {
+      "responsibilities": {
+        "1": "Developed 10 diverse React applications, utilizing class components, hooks, and React routers, while implementing data processing functionality and client-server communication through APIs",
+        "2": "Provided quality code reviews for over 40 projects, offering valuable suggestions and comments to team members and colleagues",
+        "3": "Ensured clean, maintainable, and easily readable code (2k+ lines) following best practices and utilizing professional documentation",
+        "4": "Proficient in application state management using Redux and Redux Toolkit for large and complex applications",
+        "5": "Demonstrated expertise in creating high-quality webpages (10 HTML/CSS projects) from design to deployment, incorporating HTML, CSS, SASS, and JS, React, Vue."
+      }
+    },
+    "courses": "TRAINING / COURSES"
+  },
+  "project": {
+    "description": {
+      "2": "Task management application built with React",
+      "3": "Application with the Nova Poshta API, with which you can track the status of your parcel",
+      "4": "Game to merge numbered tiles to reach 2048",
+      "5": "The web page that highlights the diverse range of bicycles, accessories, and services offered by the shop",
+      "6": "Web page that showcases the exhibits, history, and unique features of the museum",
+      "7": "Dia (Strategic Agency. Create additional value for companies, products, and services as well as verbal and visual ways to deliver it to the audience.)"
+    },
+    "technologies": "Technologies",
+    "desc": "Description",
+    "projects": "Projects",
+    "footer": "You can see other projects in my GitHub"
+  },
+  "skills": {
+    "skills": "Skills",
+    "aristotle": "Intelligence is not only about knowledge, but also about the ability to apply knowledge in practice. in practice.",
+    "more": "More to come"
+  },
+  "footer": {
+    "touch": "Get in Touch With me"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects"
+  }
 }

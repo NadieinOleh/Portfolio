@@ -6,7 +6,6 @@ import { onMounted } from 'vue';
 import { localeStore } from './stores/locale';
 
 const store = localeStore();
-console.log(store.lang);
 
 onMounted(() => {
   document.title = 'Portfolio';
