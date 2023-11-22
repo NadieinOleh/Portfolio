@@ -2,29 +2,18 @@
   <main>
     <img class="vectorLeft vector" src="@/assets/Vector 6.svg" />
     <div class="flex flex-column wrapper py-4">
-      <h1 class="mb-3 text-uppercase">About me</h1>
+      <h1 class="mb-3 text-uppercase">{{ $t("about.about") }}</h1>
       <p class="mb-md-5 title">
-        As a passionate Front-end developer keen on mathematics and sports, I embrace this field's challenges and
-        constant evolution. With proficiency in React, Redux, JavaScript, HTML, CSS, Sass/Less, BEM, TypeScript, and
-        Git/GitHub, I thrive on staying up-to-date with ever-changing technologies, frameworks, and tools. My soft
-        skills include effective teamwork, conflict resolution, and self-motivation. Through expanding the client base
-        and exploring new markets, I achieved a remarkable 17% increase in sales volumes in recent years. I aim to
-        expand my expertise by learning Vue, Angular, and React Native. My English Level is Intermediate, and as I am
-        improving my proficiency, I will defenitely enhance client communication, understanding of requirements, and
-        confidence articulation of innovative solutions.
+        {{$t("about.title")}}
       </p>
     </div>
 
     <div class="flex flex-column mb-4">
-      <h2 class="text-center text-uppercase">EXPERIENCE</h2>
+      <h2 class="text-center text-uppercase">{{ $t("about.experience") }}</h2>
       <h5>Frontend Developer</h5>
-      <h6>Charity Organization "Project Future"</h6>
+      <h6>{{ $t("about.organization") }} "Project Future"</h6>
       <ol class="list-group list-group-numbered w-75">
-        <li class="list-group-item">A list item</li>
-        <li class="list-group-item">A list item</li>
-        <li class="list-group-item">A list item</li>
-        <li class="list-group-item">A list item</li>
-        <li class="list-group-item">A list item</li>
+        <li v-for="item in futureProject" :key="item.id" class="list-group-item">{{ item.title }}</li>
       </ol>
     </div>
 
@@ -32,32 +21,28 @@
 
     <div class="flex flex-column mb-4">
       <h5>Frontend Developer</h5>
-      <h6>Charity Organization "Project Future"</h6>
+      <h6>Freelance Projects</h6>
       <ol class="list-group list-group-numbered w-75">
         <li class="list-group-item">
-          Developed 10 diverse React applications, utilizing class components, hooks, and React routers, while
-          implementing data processing functionality and client-server communication through APIs
+          {{ $t("about.freelanceProjects.responsibilities.1") }}
         </li>
         <li class="list-group-item">
-          Provided quality code reviews for over 40 projects, offering valuable suggestions and comments to team members
-          and colleagues
+          {{ $t("about.freelanceProjects.responsibilities.2") }}
         </li>
         <li class="list-group-item">
-          Ensured clean, maintainable, and easily readable code (2k+ lines) following best practices and utilizing
-          professional documentation
+          {{ $t("about.freelanceProjects.responsibilities.3") }}
         </li>
         <li class="list-group-item">
-          Proficient in application state management using Redux and Redux Toolkit for large and complex applications
+          {{ $t("about.freelanceProjects.responsibilities.4") }}
         </li>
         <li class="list-group-item">
-          Demonstrated expertise in creating high-quality webpages (10 HTML/CSS projects) from design to deployment,
-          incorporating HTML, CSS, SASS, and JS, including animations and React transitions.
+          {{ $t("about.freelanceProjects.responsibilities.5") }}
         </li>
       </ol>
     </div>
 
     <div class="flex flex-column mb-5">
-      <h5>TRAINING / COURSES</h5>
+      <h5> {{ $t("about.courses") }}</h5>
       <ul class="list-group list-group w-75">
         <li class="list-group-item">
           <p class="m-0">Mate academy</p>
@@ -78,6 +63,58 @@
     </div>
   </main>
 </template>
+
+<script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from 'vue';
+
+const { t } = useI18n(); 
+
+const futureProject = computed(() => [
+  {
+    id: 1,
+    title:
+      t("about.projectFuture.responsibilities.1"),
+  },
+  {
+    id: 2,
+    title:
+    t("about.projectFuture.responsibilities.2"),
+  },
+  {
+    id: 3,
+    title:
+    t("about.projectFuture.responsibilities.3"),
+  },
+  {
+    id: 4,
+    title:
+    t("about.projectFuture.responsibilities.44"),
+  },
+  {
+    id: 5,
+    title:
+    t("about.projectFuture.responsibilities.5"),
+  },
+  {
+    id: 6,
+    title:
+    t("about.projectFuture.responsibilities.6"),
+  },
+  {
+    id: 7,
+    title:
+    t("about.projectFuture.responsibilities.7"),
+  },
+  {
+    id: 8,
+    title:
+    t("about.projectFuture.responsibilities.8"),
+  },
+])
+
+
+</script>
 
 <style lang="scss" scoped>
 .vectorLeft {

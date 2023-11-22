@@ -1,9 +1,9 @@
 <template>
   <footer class="footer bg-black">
     <div class="container text-center pb-1">
-      <div class="row flex">
+      <div class="row flex mb-2">
         <div class="col-12 pt-4">
-          <h3 class="text-center text-success mb-4 title">Get in Touch With me</h3>
+          <h3 class="text-center text-success mb-4 title">{{$t("footer.touch")}}</h3>
         </div>
 
         <div class="col-12 pb-3">
@@ -50,6 +50,7 @@ const email = 'nadeinolegdev@gmail.com';
   line-height: normal;
   animation: shakeX;
   animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .uk {
