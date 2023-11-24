@@ -18,14 +18,14 @@
         />
       </div>
 
-      <img class="d-block m-auto mb-2" src="../../public/Icons/skills/quotes.svg" />
+      <img class="d-block m-auto mb-2" src="/public/Icons/skills/quotes.svg" />
       <h2 class="text-center blockquote-footer mt-0">
         {{ $t('skills.aristotle') }}
       </h2>
 
       <h3 class="text-center blockquote-footer m-0">Aristotle</h3>
 
-      <img class="d-block m-auto mt-2" src="../../public/Icons/skills/quotes.svg" />
+      <img class="d-block m-auto mt-2" src="/Portfolio/Icons/skills/quotes.svg" />
     </div>
   </main>
 </template>
@@ -41,117 +41,117 @@ const icons = computed(() =>
     {
       id: 1,
       name: 'React',
-      src: '../../public/Icons/skills/React.svg',
+      src: '/Portfolio/Icons/skills/React.svg',
     },
     {
       id: 2,
       name: 'Redux',
-      src: '../../public/Icons/skills/Redux.svg',
+      src: '/Portfolio/Icons/skills/Redux.svg',
     },
     {
       id: 3,
       name: 'Nextjs',
-      src: '../../public/Icons/skills/Nextjs.svg',
+      src: '/Portfolio/Icons/skills/Nextjs.svg',
     },
     {
       id: 4,
       name: 'TypeScript',
-      src: '../../public/Icons/skills/TypeTs.svg',
+      src: '/Portfolio/Icons/skills/TypeTs.svg',
     },
     {
       id: 5,
       name: 'Vue',
-      src: '../../public/Icons/skills/Vue.svg',
+      src: '/Portfolio/Icons/skills/Vue.svg',
     },
     {
       id: 6,
       name: 'Nuxt',
-      src: '../../public/Icons/skills/Nuxt.svg',
+      src: '/Portfolio/Icons/skills/Nuxt.svg',
     },
     {
       id: 7,
       name: 'JavaScript',
-      src: '../../public/Icons/skills/JavaScript.svg',
+      src: '/Portfolio/Icons/skills/Javascript.svg',
     },
     {
       id: 8,
       name: 'Html5',
-      src: '../../public/Icons/skills/Html5.svg',
+      src: '/Portfolio/Icons/skills/Html5.svg',
     },
     {
       id: 9,
       name: 'Css3',
-      src: '../../public/Icons/skills/Css3.svg',
+      src: '/Portfolio/Icons/skills/Css3.svg',
     },
     {
       id: 10,
       name: 'Sass',
-      src: '../../public/Icons/skills/Sass.svg',
+      src: '/Portfolio/Icons/skills/Sass.svg',
     },
     {
       id: 11,
       name: 'Bootstrap',
-      src: '../../public/Icons/skills/Bootstrap.svg',
+      src: '/Portfolio/Icons/skills/Bootstrap.svg',
     },
     {
       id: 12,
       name: 'MUI',
-      src: '../../public/Icons/skills/material-ui.svg',
+      src: '/Portfolio/Icons/skills/material-ui.svg',
     },
     {
       id: 13,
       name: 'Figma',
-      src: '../../public/Icons/skills/Figma.svg',
+      src: '/Portfolio/Icons/skills/Figma.svg',
     },
     {
       id: 14,
       name: 'Sql',
-      src: '../../public/Icons/skills/Sql.svg',
+      src: '/Portfolio/Icons/skills/Sql.svg',
     },
     {
       id: 15,
       name: 'Vscode',
-      src: '../../public/Icons/skills/Vscode.svg',
+      src: '/Portfolio/Icons/skills/Vscode.svg',
     },
     {
       id: 16,
       name: 'Trello',
-      src: '../../public/Icons/skills/Trello.svg',
+      src: '/Portfolio/Icons/skills/Trello.svg',
     },
     {
       id: 17,
       name: 'Tools',
-      src: '../../public/Icons/skills/Tools.svg',
+      src: '/Portfolio/Icons/skills/Tools.svg',
     },
     {
       id: 18,
       name: 'Npm',
-      src: '../../public/Icons/skills/Npm.svg',
+      src: '/Portfolio/Icons/skills/Npm.svg',
     },
     {
       id: 19,
       name: 'Nodejs',
-      src: '../../public/Icons/skills/Nodejs.svg',
+      src: '/Portfolio/Icons/skills/Nodejs.svg',
     },
     {
       id: 20,
       name: 'GitHub',
-      src: '../../public/Icons/skills/GithubFilled.svg',
+      src: '/Portfolio/Icons/skills/GithubFilled.svg',
     },
     {
       id: 21,
       name: 'Git',
-      src: '../../public/Icons/skills/Git.svg',
+      src: '/Portfolio/Icons/skills/Git.svg',
     },
     {
       id: 22,
       name: 'Docker',
-      src: '../../public/Icons/skills/Docker.svg',
+      src: '/Portfolio/Icons/skills/Docker.svg',
     },
     {
       id: 23,
       name: t('skills.more'),
-      src: '../../public/Icons/skills/Dots.svg',
+      src: '/Portfolio/Icons/skills/Dots.svg',
     },
   ]
 );
