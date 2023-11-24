@@ -72,6 +72,7 @@ const downloadWithAxios = (url, title) => {
     responseType: 'arraybuffer',
   })
     .then((response) => {
+      error.value = t('')
       forceFileDownload(response, title);
     })
     .catch(() => (error.value = t('home.error')));

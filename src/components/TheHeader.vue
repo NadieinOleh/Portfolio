@@ -26,7 +26,7 @@ const links = computed(() => [
     <nav class="navbar navbar-expand-lg m-0">
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-          <a class="navbar-brand p-0" href="#"> <img alt="Vue logo" class="logo m-0 p-0" src="@/assets/logo.svg" /></a>
+          <a class="navbar-brand p-0" href="/"> <img alt="Vue logo" class="logo m-0 p-0" src="@/assets/logo.svg" /></a>
         </div>
 
         <div class="d-flex gap-3">
