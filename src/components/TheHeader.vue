@@ -1,13 +1,24 @@
 <script setup>
+import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+import { localeStore } from '../stores/locale';
+import { storeToRefs } from 'pinia';
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-const links = [
-  {src: '/', title: 'Home', id: 1},
-  {src: '/About', title: 'About me', id: 2},
-  {src: '/Skills', title: 'Skills', id: 3},
-  {src: '/Projects', title: 'Projects', id: 4},
-  {src: '/Contacts', title: 'Contacts', id: 5},
-]
+const { t } = useI18n();
+
+const store = localeStore();
+const { lang } = storeToRefs(store);
+
+const selectedOption = ref(lang);
+
+const links = computed(() => [
+  { src: '/', title: t('header.home'), id: 1 },
+  { src: '/About', title: t('header.about'), id: 2 },
+  { src: '/Skills', title: t('header.skills'), id: 3 },
+  { src: '/Projects', title: t('header.projects'), id: 4 },
+]);
 </script>
 
 <template>
@@ -18,24 +29,36 @@ const links = [
           <a class="navbar-brand p-0" href="#"> <img alt="Vue logo" class="logo m-0 p-0" src="@/assets/logo.svg" /></a>
         </div>
 
-        <button
-          class="navbar-toggler text-primary"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="d-flex gap-3">
+          <select
+            class="form-select form-select-sm text-success"
+            v-model="selectedOption"
+            @change="$i18n.locale = selectedOption"
+          >
+            <option value="en">EN</option>
+            <option value="uk">UA</option>
+          </select>
+
+          <button
+            class="navbar-toggler text-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item" v-for="link in links" :key="link.id">
-              <RouterLink  :to="link.src">{{ link.title }}</RouterLink>
+              <RouterLink :to="link.src">{{ link.title }}</RouterLink>
             </li>
-           
+
+            <li class="nav-item"></li>
           </ul>
         </div>
       </div>
@@ -58,5 +81,4 @@ const links = [
   object-fit: cover;
   object-position: center;
 }
-
 </style>

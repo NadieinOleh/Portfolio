@@ -1,28 +1,28 @@
 <template>
   <footer class="footer bg-black">
     <div class="container text-center pb-1">
-      <div class="row flex">
+      <div class="row flex mb-2">
         <div class="col-12 pt-4">
-          <h3 class="text-center text-success mb-4 title">Get in Touch With me</h3>
+          <h3 class="text-center text-success mb-4 title">{{$t("footer.touch")}}</h3>
         </div>
 
         <div class="col-12 pb-3">
           <h4 class="text-center email">{{ email }}</h4>
         </div>
 
-        <div class="col"><img class="image" src="@/assets/ukraine.png" alt="Stand With Ukraine" /></div>
+        <div class="col-3"><img class="image" src="@/assets/ukraine.png" alt="Stand With Ukraine" /></div>
 
-        <div class="col">
+        <div class="col-3">
           <a href="https://github.com/NadieinOleh" target="blank"><img class="icon" src="@/assets/github.svg" alt="gitHub" /></a>
         </div>
 
-        <div class="col">
+        <div class="col-3">
           <a href="https://www.linkedin.com/in/oleh-nadiein-764a96175/" target="blank"
             ><img class="icon" src="@/assets/linkendin.svg" alt="linkendin"
           /></a>
         </div>
 
-        <div class="col">
+        <div class="col-3">
           <a href="https://t.me/Nadiein_Oleh/" target="blank"
             ><img class="icon" src="@/assets/telegram.svg" alt="telegram"
           /></a>
@@ -33,7 +33,6 @@
 </template>
 
 <script setup>
-import 'animate.css';
 
 const email = 'nadeinolegdev@gmail.com';
 </script>
@@ -51,6 +50,7 @@ const email = 'nadeinolegdev@gmail.com';
   line-height: normal;
   animation: shakeX;
   animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .uk {
@@ -59,8 +59,6 @@ const email = 'nadeinolegdev@gmail.com';
 .image {
   width: 100px;
   border-radius: 50%;
-
- 
 }
 
 @media (max-width: 768px) {

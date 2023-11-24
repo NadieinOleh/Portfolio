@@ -4,6 +4,8 @@
   <main>
     <div class="container text-center">
       <div class="row">
+        <img class="vector" src="@/assets/Vector 8.svg" />
+
         <div class="col-xl-6 col-md-12 mb-5 flex flex-column">
           <p class="m-0 text-uppercase topTitle waviy">
             <span style="--i: 1">w</span>
@@ -16,9 +18,9 @@
           </p>
 
           <h1 class="titleAnimation">
-            <span class="textAnimation">I`m</span>
-            <span class="textAnimation">Oleh</span>
-            <span class="textAnimation">Nadiein</span>
+            <span class="textAnimation">{{ $t("home.home") }}</span>
+            <span class="textAnimation">{{ $t("home.name") }}</span>
+            <span class="textAnimation">{{$t("home.surname")}}</span>
           </h1>
 
           <h5 class="subTitleAnimation">
@@ -26,21 +28,68 @@
             <span class="textAnimation">End</span>
             <span class="textAnimation">Developer</span>
           </h5>
-          <button type="button" class="btn btn-outline-success">Download CV</button>
+          <button type="button" @click="downloadWithAxios(cv.src, cv.title)" class="btn btn-outline-success">
+            {{$t("home.download")}} CV
+          </button>
+
+          <p class="mt-3 text-danger" v-show="error">{{ error }}</p>
         </div>
         <div class="col-xl-6 col-md-12 flex mb-5 mb-sm-5">
-          <img class="img flex" src="@/assets/myFoto.png" alt="MyFoto" />
+          <img class="img flex" src="@/assets/372497211387458.png " alt="MyFoto" />
         </div>
       </div>
     </div>
   </main>
 </template>
 
+<script setup>
+import { ref } from 'vue';
+import axios from 'axios';
+
+const cv = {
+  title: 'CV_Oleh_Nadiein.pdf',
+  src: 'src/assets/CV_Oleh_Nadiein.pdf',
+};
+
+const error = ref('');
+
+const forceFileDownload = (response, title) => {
+  const url = window.URL.createObjectURL(new Blob([response.data]));
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', title);
+  document.body.appendChild(link);
+  link.click();
+};
+
+const downloadWithAxios = (url, title) => {
+  axios({
+    method: 'get',
+    url,
+    responseType: 'arraybuffer',
+  })
+    .then((response) => {
+      forceFileDownload(response, title);
+    })
+    .catch(() => (error.value = 'Oops, we have a problem'));
+};
+</script>
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-.titleAnimation, .subTitleAnimation {
+.vector {
+  position: absolute;
+  z-index: -1;
+  flex-shrink: 0;
+  fill: rgba(255, 255, 255, 0.18);
+  left: 0;
+  filter: blur(100px);
+}
+
+.titleAnimation,
+.subTitleAnimation {
   max-width: 40ch;
   text-align: center;
   transform: scale(0.94);
@@ -52,7 +101,8 @@
   }
 }
 
-.textAnimation, .subTextAnimation {
+.textAnimation,
+.subTextAnimation {
   display: inline-block;
   opacity: 0;
   filter: blur(4px);
@@ -130,5 +180,8 @@ span:nth-child(3) {
   max-width: 400px;
   max-height: 400px;
   border-radius: 10px;
+
+  animation: slideInRight;
+  animation-duration: 2s;
 }
 </style>
