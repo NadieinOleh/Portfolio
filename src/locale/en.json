@@ -3,7 +3,8 @@
     "home": "I`m",
     "download": "Download",
     "name": "Oleh",
-    "surname": "Nadiein"
+    "surname": "Nadiein",
+    "error": "Oops, This only works locally"
   },
   "about": {
     "about": "About me",

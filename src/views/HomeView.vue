@@ -18,9 +18,9 @@
           </p>
 
           <h1 class="titleAnimation">
-            <span class="textAnimation">{{ $t("home.home") }}</span>
-            <span class="textAnimation">{{ $t("home.name") }}</span>
-            <span class="textAnimation">{{$t("home.surname")}}</span>
+            <span class="textAnimation">{{ $t('home.home') }}</span>
+            <span class="textAnimation">{{ $t('home.name') }}</span>
+            <span class="textAnimation">{{ $t('home.surname') }}</span>
           </h1>
 
           <h5 class="subTitleAnimation">
@@ -29,10 +29,10 @@
             <span class="textAnimation">Developer</span>
           </h5>
           <button type="button" @click="downloadWithAxios(cv.src, cv.title)" class="btn btn-outline-success">
-            {{$t("home.download")}} CV
+            {{ $t('home.download') }} CV
           </button>
 
-          <p class="mt-3 text-danger" v-show="error">{{ error }}</p>
+          <p class="mt-3 text-danger" v-show="error">{{ $t('home.error') }}</p>
         </div>
         <div class="col-xl-6 col-md-12 flex mb-5 mb-sm-5">
           <img class="img flex" src="@/assets/372497211387458.png " alt="MyFoto" />
@@ -45,10 +45,13 @@
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const cv = {
   title: 'CV_Oleh_Nadiein.pdf',
-  src: 'src/assets/CV_Oleh_Nadiein.pdf',
+  src: '/public/CV_Oleh_Nadiein.pdf',
 };
 
 const error = ref('');
@@ -71,7 +74,7 @@ const downloadWithAxios = (url, title) => {
     .then((response) => {
       forceFileDownload(response, title);
     })
-    .catch(() => (error.value = 'Oops, we have a problem'));
+    .catch(() => (error.value = t('home.error')));
 };
 </script>
 
