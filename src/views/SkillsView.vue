@@ -25,7 +25,7 @@
 
       <h3 class="text-center blockquote-footer m-0">Aristotle</h3>
 
-      <img class="d-block m-auto mt-2" src="/Portfolio/Icons/skills/quotes.svg" />
+      <img class="d-block m-auto mt-2" src="/public/Icons/skills/quotes.svg" />
     </div>
   </main>
 </template>
