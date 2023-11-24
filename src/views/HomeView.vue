@@ -51,7 +51,7 @@ const { t } = useI18n();
 
 const cv = {
   title: 'CV_Oleh_Nadiein.pdf',
-  src: '/public/CV_Oleh_Nadiein.pdf',
+  src: '../../public/CV_Oleh_Nadiein.pdf',
 };
 
 const error = ref('');
