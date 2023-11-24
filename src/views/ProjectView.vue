@@ -108,7 +108,7 @@ const projects = computed(() => [
 }
 
 .animationCard {
-  animation: backInLeft;
+  animation: jackInTheBox;
   animation-duration: 3s;
 }
 
