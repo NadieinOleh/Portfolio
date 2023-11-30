@@ -23,10 +23,10 @@ const links = computed(() => [
 
 <template>
   <header class="header mb-5">
-    <nav class="navbar navbar-expand-lg m-0">
+    <nav class="navbar navbar-expand-lg m-0 p-3">
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-          <a class="navbar-brand p-0" href="/"> <img alt="Vue logo" class="logo m-0 p-0" src="@/assets/logo.svg" /></a>
+          <a class="navbar-brand p-0" href="/"> <img alt="Vue logo" class="logo m-0 p-0" src="@/assets/logoOrange.svg" /></a>
         </div>
 
         <div class="d-flex gap-3">
@@ -76,9 +76,9 @@ const links = computed(() => [
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 70px;
-  object-fit: cover;
+  width: 40px;
+  height: 42px;
+  object-fit: contain;
   object-position: center;
 }
 </style>

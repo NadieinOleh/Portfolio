@@ -50,7 +50,6 @@ const email = 'nadeinolegdev@gmail.com';
   line-height: normal;
   animation: shakeX;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
 }
 
 .uk {

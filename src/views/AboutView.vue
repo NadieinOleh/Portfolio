@@ -1,13 +1,6 @@
 <template>
   <main>
-    <img class="vectorLeft vector" src="@/assets/Vector 6.svg" />
-
-    <div class="flex flex-column wrapper py-4 animation">
-      <h1 class="mb-3 text-uppercase">{{ $t('about.about') }}</h1>
-      <p class="mb-md-5 title">
-        {{ $t('about.title') }}
-      </p>
-    </div>
+    <img class="vector" src="@/assets/Vector 6.svg" />
 
     <div class="flex flex-column mb-4 animation">
       <h2 class="text-center text-uppercase">{{ $t('about.experience') }}</h2>
@@ -86,7 +79,7 @@ const futureProject = computed(() => [
   },
   {
     id: 4,
-    title: t('about.projectFuture.responsibilities.44'),
+    title: t('about.projectFuture.responsibilities.4'),
   },
   {
     id: 5,
@@ -112,19 +105,9 @@ const futureProject = computed(() => [
   animation: zoomIn;
   animation-duration: 2s;
 }
-.vectorLeft {
-  left: -25%;
-}
-.vectorRight {
-  right: -25%;
-}
 
-.wrapper {
-  width: 50%;
-  margin: 0 auto;
-  @media (max-width: 768px) {
-    width: 80%;
-  }
+.vectorRight {
+  left: 35%;
 }
 
 .title {

@@ -8,13 +8,7 @@
 
         <div class="col-xl-6 col-md-12 mb-5 flex flex-column">
           <p class="m-0 text-uppercase topTitle waviy">
-            <span style="--i: 1">w</span>
-            <span style="--i: 2">e</span>
-            <span style="--i: 3">l</span>
-            <span style="--i: 4">c</span>
-            <span style="--i: 5">o</span>
-            <span style="--i: 6">m</span>
-            <span style="--i: 7">e</span>
+            welcome
           </p>
 
           <h1 class="titleAnimation">
@@ -38,6 +32,13 @@
           <img class="img flex" src="@/assets/372497211387458.png " alt="MyFoto" />
         </div>
       </div>
+    </div>
+
+    <div class="flex flex-column container wrapper py-4 animation">
+      <h1 class="mb-3 text-uppercase">{{ $t('about.about') }}</h1>
+      <p class="mb-md-5">
+        {{ $t('about.title') }}
+      </p>
     </div>
   </main>
 </template>
@@ -90,6 +91,13 @@ const downloadWithAxios = (url, title) => {
   fill: rgba(255, 255, 255, 0.18);
   left: 0;
   filter: blur(100px);
+}
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 }
 
 .titleAnimation,
